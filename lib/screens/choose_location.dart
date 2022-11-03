@@ -30,8 +30,9 @@ class _ChooseLocationState extends State<ChooseLocation> {
       'location': instance.location,
       'flag': instance.flag,
       'time': instance.time,
-      'isDayTime': instance.isDayTime,
+      'isDaytime': instance.isDayTime,
     });
+    print(instance.isDayTime.runtimeType);
   }
 
   @override
@@ -52,6 +53,7 @@ class _ChooseLocationState extends State<ChooseLocation> {
             child: Card(
               child: ListTile(
                 onTap: () {
+                  print(locations[index].location);
                   updateTime(index);
                 },
                 leading: CircleAvatar(
